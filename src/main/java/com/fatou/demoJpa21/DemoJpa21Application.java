@@ -27,8 +27,8 @@ public class DemoJpa21Application implements CommandLineRunner {
 		Course course = diagne.findById(10001L);
 		
 		logger.info("Course 10001 -> {}", course);
-		
 		diagne.deletedById(10001L);
+		diagne.save(new Course("Microservice"));
 	}
 
 }
